@@ -1,0 +1,22 @@
+{% extends "base_header.html" %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+<div class="container">
+<ol>
+    <table class="table">
+    <tr>
+        <th><h3 class="display-6">Sensors</h3></th>
+    </tr>
+        {% for sensor in sensors %}
+            <tr>
+                <td><a class="text-decoration-none link-secondary" style="font-size: 20px" href="/sensors/{{ sensor.id }}">{{ sensor.name }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+</ol>
+</div>
+{% endblock %}

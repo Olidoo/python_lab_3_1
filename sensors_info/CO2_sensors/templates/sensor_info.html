@@ -1,0 +1,23 @@
+{% extends "base_header.html" %}
+{% block title %}
+    Server Info: {{ server.1.1 }}
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1 class="display-5 mb-4 mt-4">Detailed information about the sensor:</h1>
+    <div class="container">
+        <table class="table">
+        {% for param in server %}
+            <tr>
+                <td>{{ param.0 }}</td>
+                <td>{{ param.1 }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    </div>
+</div>
+
+
+{% endblock %}
